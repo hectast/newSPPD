@@ -1,0 +1,34 @@
+RewriteEngine On
+RewriteBase /newSPPD/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+ErrorDocument 404 http://localhost/newSPPD/404.php
+
+<Files koneksi.php>
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files login_cek.php>
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files login_cek_token.php>
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files login_function.php>
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files ttd.php>
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+Options All -Indexes
